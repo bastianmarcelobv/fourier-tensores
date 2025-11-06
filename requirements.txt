@@ -1,0 +1,32 @@
+# Requirements.txt - Dependencias del Proyecto
+# Procesamiento de Imágenes con Transformada de Fourier y Tensores
+
+# Core Scientific Computing
+numpy==1.24.3
+scipy==1.11.4
+
+# Tensor Decompositions
+tensorly==0.8.1
+
+# Web Application Framework
+dash==2.14.2
+dash-bootstrap-components==1.5.0
+
+# Visualization
+plotly==5.18.0
+
+# Image Processing
+pillow==10.1.0
+
+# Data Analysis
+pandas==2.1.4
+
+# Additional Utilities
+flask==3.0.0
+gunicorn==21.2.0
+requests==2.31.0
+
+# Development and Testing (optional)
+pytest==7.4.3
+black==23.12.1
+flake8==6.1.0

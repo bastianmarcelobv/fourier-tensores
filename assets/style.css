@@ -1,0 +1,164 @@
+/* assets/style.css - Estilos personalizados para la aplicación */
+
+/* Variables de color */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --dark-color: #2c3e50;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+}
+
+/* Tarjetas */
+.card {
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezados de tarjetas */
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+/* Botones */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #2980b9);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Sliders */
+.rc-slider-track {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    height: 6px;
+}
+
+.rc-slider-handle {
+    border: 3px solid var(--primary-color);
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    margin-top: -7px;
+}
+
+.rc-slider-handle:hover,
+.rc-slider-handle:active {
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.6);
+}
+
+/* Zona de carga */
+div[id="upload-image"] {
+    background: white;
+    transition: all 0.3s ease;
+}
+
+div[id="upload-image"]:hover {
+    background: #f0f8ff;
+    border-color: var(--primary-color) !important;
+}
+
+/* Tablas */
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: var(--dark-color);
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading spinner */
+._dash-loading-callback {
+    color: var(--primary-color);
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+h1 {
+    color: var(--dark-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gráficos */
+.js-plotly-plot {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .alert, .table {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+    }
+}
+
+/* Iconos Bootstrap */
+.bi {
+    vertical-align: middle;
+}
