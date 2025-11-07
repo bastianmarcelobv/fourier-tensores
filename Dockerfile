@@ -84,8 +84,7 @@ EXPOSE 822 8052
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
     CMD curl -f http://localhost:8052/ || exit 1
 
-# Volúmenes para persistencia de datos
-VOLUME ["/app/uploads", "/app/outputs", "/app/logs"]
+
 
 # Punto de entrada
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
